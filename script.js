@@ -141,3 +141,54 @@ document.addEventListener("DOMContentLoaded", function (event) {
     daysElement.textContent =
         `I just moved here to Tulsa ${ daysElaspedFromMoveIn()} days ago!`;
 });
+
+// About Me Carousel / Bio Carousel
+const bioDescriptions = [
+    `I just moved here to Tulsa ${daysElaspedFromMoveIn()} days ago!`,
+    "I'm just starting my career as a developer, I worked at starbucks for 4 years (!) until I decided to career swap to software engineering. I really enjoyed helping people have a productive start to their mornings or kickstart their afternoons and I wanted to take that to the field of software development.",
+    "I am currently enrolled at Holberton School, a school that takes people from diverse backgrounds and educations and teaches them a wide variety of programming technologies and, importantly, the ability to learn anything I don't already know. I graduate in XX days!",
+    "I found the world of web and app development to suit my brain's particular blend of logic & creativity. I love working on software that doesn't frusterate and feels comfortable to use. Just like when I worked at Starbucks, I want all users to find my products accessible, easy, and perhaps even fun!",
+    "Here's a bonus carousel item of another picture from Tulsa! I love living here so far, this city hides it's art all over downtown. For a city so deep in the midwest, it has a thorough artistic culture. It is such a joy to walk around and find great bars, great restaurants, and magnificent artworks all over the city!"
+];
+
+const bioImages = [
+    'assets/Tulsa_01.jpg',
+    'assets/starbucks_howard_schultz.jpg',
+    'assets/Holberton_PLD',
+    'assets/ui_design.jpg',
+    'assets/Tulsa_02.jpg'
+]
+
+let carouselAnimationId = null;
+function slideInCarouselItem(element) {
+    let pos = 0;
+    const finalPos = 500;
+    element.style.left = element.offsetLeft + 'px';
+
+    clearInterval(carouselAnimationId);
+    carouselAnimationId = setInterval(frame, 5);
+    // Item is out of frame, let it slide into place
+
+    function frame() {
+        pos++;
+
+        if (pos === finalPos) {
+            clearInterval(carouselAnimationId);
+        } else {
+            element.style.left = element.offsetLeft - (finalPos - pos) / element.offsetLeft + 'px';
+        }
+    }
+}
+
+function displayNewCarouselItem(id) {
+    // slide in the next carousel item
+
+    // change the text to the next carousel item
+    // update the correct circle to closed instead of open.
+}
+
+function displayPrevCarouselItem() {
+    // Reverse the animation of the next carousel item
+    // Change the text
+    // update the correct circle to closed instead of open
+}
