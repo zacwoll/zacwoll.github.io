@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- My stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font-Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Twemoji -->
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="twemoji-awesome.css">
+
+  <title>Personal Website</title>
+</head>
+<body>
+    <nav></nav>
+    <section id="Hero">
+        <div class="background">
+            <div class="card">
+                <img class="profile-picture" src="assets/444_headshot.png" style="height: 400px; width: 400px; background-color: plum;" alt="Zac waves hi!" />
+            </div>
+            <div class="card">
+                <h1>Hey there! <i class="twa twa-lg twa-wave"></i></h1>
+                <h2>I'm Zac</h2>
+                <h2>I am an aspiring <div class="typewriter"><h2>developer</h2></div></h2>
+            </div>
+
+        </div>
+    </section>
+    <section id="About">
+        <div class="background">
+            <h1>About me</h1>
+            <div class="bio-carousel">
+                <div class="location">
+                    <p class="moveIn"></p>
+                    <img src="assets/Tulsa_01.jpg" />
+                </div>
+                <div class="bio">
+                    <p>I'm just starting my career as a developer, I worked at starbucks for 4 years (!) until I decided to career swap to software engineering. I really enjoyed helping people have a productive start to their mornings or kickstart their afternoons and I wanted to take that to the field of software development.</p>
+                    <img src="" />
+                </div>
+                <div class="engineering">
+                    <p>I am currently enrolled at Holberton School, a school that takes people from diverse backgrounds and educations and teaches them a wide variety of programming technologies and, importantly, the ability to learn anything I don't already know. I graduate in XX days!
+                        Check them out <a href="https://www.holbertonschool.com/">here</a> or check out my resume for a short list of topics</p>
+                    <img src="" alt="holberton logo seahorse" />
+                </div>
+                <div class="goal">
+                    <p>I found the world of web and app development to suit my brain's particular blend of logic & creativity. I love working on software that doesn't frusterate and feels comfortable to use. Just like when I worked at Starbucks, I want all users to find my products accessible, easy, and perhaps even fun!</p>
+                    <img src="" alt="fun" />
+                </div>
+                <div class="bonus">
+                    <p>Here's a bonus carousel item of another picture from Tulsa! I love living here so far, this city hides it's art all over downtown. For a city so deep in the midwest, it has a thorough artistic culture. It is such a joy to walk around and find great bars, great restaurants, and magnificent artworks all over the city!</p>
+                    <img src="assets/Tulsa_02.jpg" alt="Tulsa" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="background">
+        <div class="LikesWorkResume">
+            <div class="LikesWork">
+                <div class="LikesWorkResumeTabs">
+                    <div class="tabs">
+                        <h2 class="active">I love..</h2>
+                        <h2>My works</h2>
+                    </div>
+                    <div class="ResumeContainer">
+                        <a href="https://docs.google.com/document/d/11RGurYMPIKVZ3yGFcBqtw84x7yO-FnPcmZRlPD4BGk0/edit?usp=sharing" aria-label="Link to Google Docs Resume" target="_blank"><h2>Resume</h2></a>
+                        <a href="assets/Resume.pdf" download="Resume_Zac_Woll.pdf"><i class="fa fa-solid fa-download"></i></a>
+                    </div>
+
+                </div>
+                <div class="LikesContainer display">
+                    <!-- Likes Panels -->
+                    <div class="likes-panel active" id="coffee">
+                        <h3>Coffee</h3>
+                    </div>
+                    <div class="likes-panel" id="environment">
+                        <img src="assets/smoke.jpg" />
+                        <img src="assets/solar.jpg" />
+                        <img src="assets/water_bottles.jpg" />
+                        <img src="assets/windmills.jpg" />
+                        <h3>Protecting the Environment</h3>
+                    </div>
+                    <div class="likes-panel" id="coding">
+                        <h3>Programming the future ('s interfaces)</h3>
+                    </div>
+                    <div class="likes-panel" id="music">
+                        <img src="assets/guitar.jpg" />
+                        <img src="assets/microphone.jpg" />
+                        <img src="assets/keyboard.jpg" />
+                        <img src="assets/drums.jpg" />
+                        <h3>Music!</h3>
+                    </div>
+                </div>
+                <div class="WorkContainer display">
+                    <!-- work panels -->
+                    <div class="works-panel active" id="smiling-school-homepage">
+                        <h3>Smiling School</h3>
+                    </div>
+                    <div class="works-panel" id="smiling-school-pricing">
+                        <h3>Pricing</h3>
+                    </div>
+                    <div class="works-panel" id="headphones">
+                        <h3>Headphones</h3>
+                    </div>
+                    <div class="works-panel" id="pomodoro">
+                        <h3>Pomodoro App</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section id="Contact">
+        <div class="contact container">
+            <div class="EmailMessage">
+                <h1>Contact me at my </h1>
+                <a href="mailto:zacwoll@gmail.com"><div class="EmailContainer">
+                    <h1>email</h1>
+                </div></a>
+                <div class="CopyEmail" onclick="addEmailToClipboard()">
+                    <div class="CopyMessage">
+                        <h3>copied</h3>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <i class="fas fa-copy"></i>
+                    <h2>copy</h2>
+                </div>
+            </div>
+            <p><em>uses your default email client</em></p>
+            <h2>Or check out some of my links</h2>
+            <div class="LinksContainer">
+                <a href="https://github.com/zacwoll" target="_blank" aria-label="Link to Github">
+                    <div class="link-container">
+                        <i class="fab fa-github" alt="github"></i>
+                        <h3>Github</h3>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/zachary-woll/" target="_blank" aria-label="Link to LinkedIn">
+                    <div class="link-container">
+                        <i class="fab fa-linkedin" alt="LinkedIn"></i>
+                        <h3>LinkedIn</h3>
+                    </div>
+                </a>
+                <a href="https://twitter.com/ZakWoll" target="_blank" aria-label="Link to Twitter">
+                    <div class="link-container">
+                        <i class="fab fa-twitter" alt="Twitter"></i>
+                        <h3>Twitter</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="last-updated">
+            <p>Last updated: 12/9/2021</p>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
