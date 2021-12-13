@@ -164,18 +164,22 @@ function slideInCarouselItem(element) {
     let pos = 0;
     const finalPos = 500;
     element.style.left = element.offsetLeft + 'px';
+    const totalDistance = element.offsetLeft;
 
     clearInterval(carouselAnimationId);
     carouselAnimationId = setInterval(frame, 5);
     // Item is out of frame, let it slide into place
 
     function frame() {
+        let lastNumber = element.offsetLeft;
+        let speed = (totalDistance - element.offsetLeft) / finalPos;
         pos++;
+        console.log(element.offsetLeft)
 
-        if (pos === finalPos) {
+        if (element.offsetLeft == 0) {
             clearInterval(carouselAnimationId);
         } else {
-            element.style.left = element.offsetLeft - (finalPos - pos) / element.offsetLeft + 'px';
+            element.style.left = element.offsetLeft - (element.offsetLeft / 9 + 1) + 'px';
         }
     }
 }
